@@ -6,94 +6,83 @@ import { SizeBox } from "../components/size-box";
 const component: React.FC = () => (
   <>
     <div>
-      <h2>TextField size 1</h2>
-      <TextField size={1} />
+      <TextField size={1} value="Size 1" />
     </div>
 
     <div>
-      <h2>TextField size 2 (= default)</h2>
-      <TextField size={2} />
+      <TextField size={2} value="Size 2 (default)" />
     </div>
 
     <div>
-      <h2>Layout</h2>
       <Layout>
-        <TextField size={1} />
-        <TextField size={1} />
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
       </Layout>
     </div>
 
     <div>
-      <h2>TextField size 3</h2>
-      <TextField size={3} />
+      <TextField size={3} value="Size 3" />
     </div>
 
     <div>
-      <h2>Layout</h2>
       <Layout>
-        <TextField size={1} />
-        <TextField size={1} />
-        <TextField size={1} />
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
       </Layout>
     </div>
 
     <div>
-      <h2>Layout</h2>
       <Layout>
-        <TextField size={1} />
-        <TextField size={2} />
+        <TextField size={1} value="Size 1" />
+        <TextField size={2} value="Size 2" />
       </Layout>
     </div>
 
     <div>
-      <h2>Layout</h2>
       <Layout>
-        <TextField size={2} />
-        <TextField size={1} />
+        <TextField size={2} value="Size 2" />
+        <TextField size={1} value="Size 1" />
       </Layout>
     </div>
 
     <div>
-      <h2>TextField size 4</h2>
-      <TextField size={4} />
+      <TextField size={4} value="Size 4" />
     </div>
 
     <div>
-      <h2>Layout</h2>
       <Layout>
-        <TextField size={2} />
-        <TextField size={2} />
+        <TextField size={2} value="Size 2" />
+        <TextField size={2} value="Size 2" />
       </Layout>
     </div>
     <div>
-      <h2>Layout</h2>
       <Layout>
-        <TextField size={1} />
-        <TextField size={1} />
-        <TextField size={1} />
-        <TextField size={1} />
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
       </Layout>
     </div>
 
     <div>
-      <h2>Flere linjer (glem afstanden mellem dem)</h2>
-      <Layout>
+      <Layout bgcolor="#e5ffcc">
         <SizeBox size={2}>
           <div>LEFT</div>
           <TextField size={1} value="Size 1" />
         </SizeBox>
         <SizeBox size={2}>
           <div>RIGHT</div>
-          <Layout>
+          <Layout bgcolor="#ccffe5">
             <TextField size={1} value="Size 1" />
             <TextField size={1} value="Size 1" />
           </Layout>
         </SizeBox>
       </Layout>
-      <Layout>
+      <Layout bgcolor="#99ccff">
         <TextField size={2} value="Size 2" />
       </Layout>
-      <Layout>
+      <Layout bgcolor="#ff99ff">
         <TextField size={1} value="Size 1" />
         <TextField size={1} value="Size 1" />
       </Layout>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@material-ui/core";
+import { Box, BoxProps } from "@material-ui/core";
 import { Theme } from "@material-ui/core/styles";
 import { Breakpoint } from "@material-ui/core/styles/createBreakpoints";
 
@@ -27,8 +27,10 @@ export interface ISizeProps {
 
 const themeSpacingBetween = 2;
 
-const component: React.FC = props => (
-  <Box display="flex">
+type Props = Pick<BoxProps, "bgcolor">;
+
+const component: React.FC<Props> = props => (
+  <Box display="flex" bgcolor={props.bgcolor}>
     {React.Children.map(props.children, (c, i) => (
       <Box key={i} ml={i > 0 ? themeSpacingBetween : undefined}>
         {c}

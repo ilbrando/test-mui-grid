@@ -2,7 +2,7 @@ import React from "react";
 import { TextField } from "../components/text-field";
 import { Layout } from "../components/layout";
 import { SizeBox } from "../components/size-box";
-import { Grid } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import { GroupContainer } from "../components/group-container";
 
 const DemoContent: React.FC = () => (
@@ -129,14 +129,31 @@ const DemoContent: React.FC = () => (
   </>
 );
 
+const Card: React.FC = props => (
+  <Box p={2} ml={1} mr={1} mb={2} bgcolor="#e0e0fd">
+    {props.children}
+  </Box>
+);
+
 const component: React.FC = () => (
-  <Grid container spacing={1}>
-    <Grid item md={12} lg={6}>
-      <DemoContent />
-    </Grid>
-    <Grid item md={12} lg={6}>
-      <DemoContent />
-    </Grid>
-  </Grid>
+  <Box display="flex">
+    <Box width="200px" bgcolor="#cccccc">
+      SIDEBAR
+    </Box>
+    <Box p={1}>
+      <Grid container>
+        <Grid item md={12} lg={6}>
+          <Card>
+            <DemoContent />
+          </Card>
+        </Grid>
+        <Grid item md={12} lg={6}>
+          <Card>
+            <DemoContent />
+          </Card>
+        </Grid>
+      </Grid>
+    </Box>
+  </Box>
 );
 export { component as Home };

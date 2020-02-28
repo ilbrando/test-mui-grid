@@ -12,10 +12,10 @@ type Props = IOwnProps & Pick<BoxProps, "bgcolor">;
 const styles = (theme: Theme) => ({
   root: {
     [theme.breakpoints.down("md")]: {
-      width: (props: IOwnProps) => sizeToWidth(theme, props.size, "md")
+      width: (props: IOwnProps) => sizeToWidth(theme, props.size, "lg")
     },
     [theme.breakpoints.up("md")]: {
-      width: (props: IOwnProps) => sizeToWidth(theme, props.size, "lg")
+      width: (props: IOwnProps) => sizeToWidth(theme, props.size, "xl")
     }
   }
 });

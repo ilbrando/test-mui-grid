@@ -142,12 +142,12 @@ const component: React.FC = () => (
     </Box>
     <Box p={1}>
       <Grid container>
-        <Grid item md={12} lg={6}>
+        <Grid item lg={6}>
           <Card>
             <DemoContent />
           </Card>
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item lg={6}>
           <Card>
             <DemoContent />
           </Card>

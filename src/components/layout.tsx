@@ -67,7 +67,6 @@ export const sizeToWidth = (theme: Theme, size: Size, breakPoint: Breakpoint) =>
     default:
       throw new Error("Ulovligt breakpoint");
   }
-  console.log(fourUnitSize);
   const oneUnitSize = (fourUnitSize - theme.spacing(themeSpacingBetween) * 3) / 4;
   return oneUnitSize * size + theme.spacing(themeSpacingBetween) * (size - 1);
 };

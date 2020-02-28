@@ -2,8 +2,9 @@ import React from "react";
 import { TextField } from "../components/text-field";
 import { Layout } from "../components/layout";
 import { SizeBox } from "../components/size-box";
+import { Grid } from "@material-ui/core";
 
-const component: React.FC = () => (
+const DemoContent: React.FC = () => (
   <>
     <div>
       <TextField size={1} value="Size 1" />
@@ -90,4 +91,14 @@ const component: React.FC = () => (
   </>
 );
 
+const component: React.FC = () => (
+  <Grid container spacing={1}>
+    <Grid item md={12} lg={6}>
+      <DemoContent />
+    </Grid>
+    <Grid item md={12} lg={6}>
+      <DemoContent />
+    </Grid>
+  </Grid>
+);
 export { component as Home };

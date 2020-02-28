@@ -1,6 +1,7 @@
 import React from "react";
 import { TextField } from "../components/text-field";
 import { Layout } from "../components/layout";
+import { SizeBox } from "../components/size-box";
 
 const component: React.FC = () => (
   <>
@@ -71,6 +72,30 @@ const component: React.FC = () => (
         <TextField size={1} />
         <TextField size={1} />
         <TextField size={1} />
+      </Layout>
+    </div>
+
+    <div>
+      <h2>Flere linjer (glem afstanden mellem dem)</h2>
+      <Layout>
+        <SizeBox size={2}>
+          <div>LEFT</div>
+          <TextField size={1} value="Size 1" />
+        </SizeBox>
+        <SizeBox size={2}>
+          <div>RIGHT</div>
+          <Layout>
+            <TextField size={1} value="Size 1" />
+            <TextField size={1} value="Size 1" />
+          </Layout>
+        </SizeBox>
+      </Layout>
+      <Layout>
+        <TextField size={2} value="Size 2" />
+      </Layout>
+      <Layout>
+        <TextField size={1} value="Size 1" />
+        <TextField size={1} value="Size 1" />
       </Layout>
     </div>
   </>

@@ -25,4 +25,4 @@ const Component: React.FC<IOwnProps> = props => {
   return <Box className={classes.root}>{props.children}</Box>;
 };
 
-export { Component as FormFieldContainer };
+export { Component as SizeBox };

@@ -1,20 +1,18 @@
 import React from "react";
-import { TextField } from "office-ui-fabric-react";
+import { TextField, ITextFieldProps } from "office-ui-fabric-react";
 import { ISizeProps, Size } from "./layout";
-import { FormFieldContainer } from "./form-field-container";
+import { SizeBox } from "./size-box";
 
 const defaultSize: Size = 2; // This is the default size for this component
 
-interface IOwnProps {
-  foo?: string;
-}
+type Props = ISizeProps & Pick<ITextFieldProps, "value">;
 
-type Props = IOwnProps & ISizeProps;
 const Component: React.FC<Props> = props => {
+  const { size, ...rest } = props;
   return (
-    <FormFieldContainer size={props.size ?? defaultSize}>
-      <TextField width="100%" />
-    </FormFieldContainer>
+    <SizeBox size={size ?? defaultSize}>
+      <TextField width="100%" {...rest} />
+    </SizeBox>
   );
 };
 
